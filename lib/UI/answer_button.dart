@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
 class AnswerButton extends StatelessWidget {
-  bool _option;
+  final bool _option;
+  final VoidCallback _onTap;
 
-  AnswerButton(this._option);
+  AnswerButton(this._option, this._onTap);
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return new Expanded(
       child: new Material(
           color: (_option) ? Colors.lightGreen : Colors.redAccent,
           child: new InkWell(
-            onTap: () => print(_option.toString() + " clicked"),
+            onTap: () => _onTap(),
             child: new Center(
               child: new Container(
                 decoration: new BoxDecoration(

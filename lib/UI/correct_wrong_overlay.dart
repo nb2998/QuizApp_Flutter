@@ -3,8 +3,9 @@ import 'dart:math';
 
 class CorrectWrongOverLay extends StatefulWidget {
   final bool is_correct;
+  final VoidCallback _onTap;
 
-  CorrectWrongOverLay(this.is_correct);
+  CorrectWrongOverLay(this.is_correct, this._onTap);
 
   @override
   State<StatefulWidget> createState() {
@@ -34,7 +35,7 @@ class CorrectWrongOverLayState extends State<CorrectWrongOverLay>
     return new Material(
       color: Colors.black45,
       child: new InkWell(
-        onTap: () => print("Overlay"),
+        onTap: () => widget._onTap(),
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
