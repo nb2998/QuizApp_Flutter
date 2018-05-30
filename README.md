@@ -1,8 +1,3 @@
-# flutter_facts_app
-
-A new Flutter application.
-
-## Getting Started
-
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+# Quiz App Flutter - Flutter is awesome!
+A small quizzing application developed using flutter.
+<br> 
